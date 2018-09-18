@@ -105,14 +105,14 @@ export default class Product extends Component {
                         />
                       </View>
                     </View>
-                    <View style={{}}>
+                    <View style={{ zIndex: 0 }}>
                       <Image
-                        style={styles.carouselImage}
+                        style={[styles.carouselImage]}
                         resizeMode="contain"
                         source={require("./images/product2.png")}
                       />
                     </View>
-                    <View style={{}}>
+                    <View>
                       <Image
                         style={styles.carouselImage}
                         resizeMode="contain"
@@ -120,6 +120,21 @@ export default class Product extends Component {
                       />
                     </View>
                   </Carousel>
+                  <View
+                        style={{
+                          position: "absolute",
+                          bottom: 60,
+                          left: 110,
+                          zIndex: 1,
+                          width: 150,
+                          height: 45,
+                          backgroundColor: "#68cb83",
+                          justifyContent:'center',
+                          borderRadius:30
+                        }}
+                      >
+                        <Text style={{textAlign:'center',color:'#f5f5f5'}}>ADD TO CART</Text>
+                      </View>
                 </View>
               </View>
               <View style={styles.parentPicker}>
@@ -131,7 +146,6 @@ export default class Product extends Component {
                       this.setState({ language: itemValue })
                     }
                   >
-                    <Picker.Item label="SELECT SIZE" value="SELECT SIZE" />
                     <Picker.Item label="SMALL" value="SMALL" />
                     <Picker.Item label="MEDIUM" value="MEDIUM" />
                     <Picker.Item label="LARGE" value="LARGE" />
@@ -143,9 +157,9 @@ export default class Product extends Component {
                   >
                     <View
                       style={{
-                        width: this.state.blue ? 35 : 25,
-                        height: this.state.blue ? 35 : 25,
-                        marginTop: this.state.blue ? null : 7,
+                        width: this.state.blue ? 35 : 22,
+                        height: this.state.blue ? 35 : 22,
+                        marginTop: this.state.blue ? null : 9,
                         borderRadius: 20,
                         backgroundColor: "#124caa"
                       }}
@@ -164,9 +178,9 @@ export default class Product extends Component {
                   >
                     <View
                       style={{
-                        width: this.state.red ? 35 : 25,
-                        height: this.state.red ? 35 : 25,
-                        marginTop: this.state.red ? null : 7,
+                        width: this.state.red ? 35 : 22,
+                        height: this.state.red ? 35 : 22,
+                        marginTop: this.state.red ? null : 9,
                         borderRadius: 20,
                         backgroundColor: "#3b3b3b",
                         marginLeft: 15

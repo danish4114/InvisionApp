@@ -8,8 +8,8 @@ import SignIn from './signin';
 import Product from './product';
 
 const AppNav = createStackNavigator({
-  Splash: { screen: Splash },
   Product:{screen:Product},
+  Splash: { screen: Splash },
   SignIn: { screen: SignIn },
   Title: { screen: Title },
   LogIn:{screen:LogIn},
