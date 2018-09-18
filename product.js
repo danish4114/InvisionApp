@@ -121,20 +121,22 @@ export default class Product extends Component {
                     </View>
                   </Carousel>
                   <View
-                        style={{
-                          position: "absolute",
-                          bottom: 60,
-                          left: 110,
-                          zIndex: 1,
-                          width: 150,
-                          height: 45,
-                          backgroundColor: "#68cb83",
-                          justifyContent:'center',
-                          borderRadius:30
-                        }}
-                      >
-                        <Text style={{textAlign:'center',color:'#f5f5f5'}}>ADD TO CART</Text>
-                      </View>
+                    style={{
+                      position: "absolute",
+                      bottom: 60,
+                      left: 110,
+                      zIndex: 1,
+                      width: 150,
+                      height: 45,
+                      backgroundColor: "#68cb83",
+                      justifyContent: "center",
+                      borderRadius: 30
+                    }}
+                  >
+                    <Text style={{ textAlign: "center", color: "#f5f5f5" }}>
+                      ADD TO CART
+                    </Text>
+                  </View>
                 </View>
               </View>
               <View style={styles.parentPicker}>
@@ -256,7 +258,10 @@ export default class Product extends Component {
                     }
                   ]}
                   renderItem={({ item, index }) => (
-                    <Text style={styles.itemText}>.{item.key}</Text>
+                    <View style={{ flexDirection: "row" }}>
+                      <Icon style={{color:'#383938'}} type="Entypo" name="dot-single" />
+                      <Text style={styles.itemText}>{item.key}</Text>
+                    </View>
                   )}
                 />
               </View>
@@ -277,8 +282,9 @@ export default class Product extends Component {
                     }
                   ]}
                   renderItem={({ item, index }) => (
-                    <View>
-                      <Text style={styles.list}>.{item.key}</Text>
+                    <View style={{ flexDirection: "row" }}>
+                      <Icon style={{color:'#383938'}} type="Entypo" name="dot-single" />
+                      <Text style={styles.list}>{item.key}</Text>
                     </View>
                   )}
                 />
